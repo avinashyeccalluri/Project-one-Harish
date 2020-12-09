@@ -1,5 +1,6 @@
 <?php
 include('config.php');
+include('files.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -407,8 +408,9 @@ both functionally and aesthetically by exploring the latest in technological wit
 <div class="grid-sizer"></div>
                     <!-- gallery item -->
                      <?php
-                    $result = mysqli_query($conn, "SELECT * from tbl_projects where category_id='1'");
-				    while($row = mysqli_fetch_array($result)) 
+                    // $result = mysqli_query($conn, "SELECT * from tbl_projects where category_id='1'");
+                    // while($row = mysqli_fetch_array($result)) 
+                    foreach($displayDetails['commercial'] as $row)
 					{
 						$i=rand(1,3);
 						if($i==1)
@@ -420,9 +422,9 @@ both functionally and aesthetically by exploring the latest in technological wit
 						
 					?>
 
-<div class="item grid-item <?php echo $class;?> commercial">
+                    <div class="item grid-item <?php echo $class;?> commercial">
                         <div class="picframe">
-                            <a class="simple-ajax-popup-align-top" href="project_details.php?id=<?php echo $row['id'];?>">
+                            <a class="simple-ajax-popup-align-top"  href="project_details.php?id=<?php echo $row['id'];?>">
                                 <span class="overlay">
                                     <span class="pf_text">
                                         <span class="project-name"><?php echo $row['name'];?></span>
@@ -430,7 +432,7 @@ both functionally and aesthetically by exploring the latest in technological wit
                                 </span>
                             </a>
 
-                            <img src="<?php echo $row['image_1'];?>" alt="" />
+                            <img src="<?php echo $row['image_1'];?>" alt="avinash" />
                         </div>
                         
                     </div>
@@ -439,8 +441,9 @@ both functionally and aesthetically by exploring the latest in technological wit
 					}?>
                     
                      <?php
-                    $result = mysqli_query($conn, "SELECT * from tbl_projects where category_id='2'");
-				    while($row = mysqli_fetch_array($result)) 
+                    // $result = mysqli_query($conn, "SELECT * from tbl_projects where category_id='2'");
+                    // while($row = mysqli_fetch_array($result)) 
+                    foreach($displayDetails['hospitality'] as $row)
 					{
 						$i=rand(1,3);
 						if($i==1)
@@ -469,8 +472,9 @@ both functionally and aesthetically by exploring the latest in technological wit
                     
                     
                      <?php
-                    $result = mysqli_query($conn, "SELECT * from tbl_projects where category_id='3'");
-				    while($row = mysqli_fetch_array($result)) 
+                    // $result = mysqli_query($conn, "SELECT * from tbl_projects where category_id='3'");
+                    // while($row = mysqli_fetch_array($result)) 
+                    foreach($displayDetails['institutional'] as $row)
 					{
 						$i=rand(1,3);
 						if($i==1)
@@ -499,8 +503,7 @@ both functionally and aesthetically by exploring the latest in technological wit
                     
                     
                      <?php
-                    $result = mysqli_query($conn, "SELECT * from tbl_projects where category_id='4'");
-				    while($row = mysqli_fetch_array($result)) 
+                    foreach($displayDetails['interiors'] as $row)
 					{
 						$i=rand(1,3);
 						if($i==1)
@@ -529,8 +532,7 @@ both functionally and aesthetically by exploring the latest in technological wit
                     
                     
                     <?php
-                    $result = mysqli_query($conn, "SELECT * from tbl_projects where category_id='5'");
-				    while($row = mysqli_fetch_array($result)) 
+                    foreach($displayDetails['residential'] as $row)
 					{
 						$i=rand(1,3);
 						if($i==1)

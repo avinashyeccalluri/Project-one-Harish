@@ -1,5 +1,6 @@
 <?php
 include('config.php');
+include('files.php')
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -112,8 +113,7 @@ include('config.php');
 
                     <!-- gallery item -->
                      <?php
-                    $result = mysqli_query($conn, "SELECT * from tbl_projects where category_id='1'");
-				    while($row = mysqli_fetch_array($result)) 
+                    foreach($displayDetails['commercial'] as $row)
 					{
 					?>
 
@@ -135,8 +135,7 @@ include('config.php');
 					}?>
                     
                      <?php
-                    $result = mysqli_query($conn, "SELECT * from tbl_projects where category_id='2'");
-				    while($row = mysqli_fetch_array($result)) 
+                    foreach($displayDetails['hospitality'] as $row)
 					{
 					?>
                     <div class="item hospitaly">
@@ -158,8 +157,7 @@ include('config.php');
                     
                     
                      <?php
-                    $result = mysqli_query($conn, "SELECT * from tbl_projects where category_id='3'");
-				    while($row = mysqli_fetch_array($result)) 
+                    foreach($displayDetails['institutional'] as $row)
 					{
 					?>
                     <div class="item institutional">
@@ -181,8 +179,7 @@ include('config.php');
                     
                     
                      <?php
-                    $result = mysqli_query($conn, "SELECT * from tbl_projects where category_id='4'");
-				    while($row = mysqli_fetch_array($result)) 
+                    foreach($displayDetails['interiors'] as $row)
 					{
 					?>
                     <div class="item interior">
@@ -204,8 +201,7 @@ include('config.php');
                     
                     
                     <?php
-                    $result = mysqli_query($conn, "SELECT * from tbl_projects where category_id='5'");
-				    while($row = mysqli_fetch_array($result)) 
+                    foreach($displayDetails['residential'] as $row)
 					{
 					?>
                     <div class="item residential">
