@@ -302,10 +302,9 @@ both functionally and aesthetically by exploring the latest in technological wit
                             <ul id="filters" class="wow fadeInUp" data-wow-delay="0s">
                                 <li><a href="#" data-filter="*" class="selected">All Projects</a></li>
                                 <li><a href="#" data-filter=".commercial">Commercial</a></li>
-                                <li><a href="#" data-filter=".hospitaly">Hospitality</a></li>
+                                <li><a href="#" data-filter=".hospitality">Hospitality</a></li>
                                 <li><a href="#" data-filter=".institutional">Institutional</a></li>
                                 <li><a href="#" data-filter=".interior">Interiors</a></li>
-                                
                                 <li><a href="#" data-filter=".residential">Residential</a></li>
                             </ul>
 
@@ -347,7 +346,7 @@ both functionally and aesthetically by exploring the latest in technological wit
 				    while($row = mysqli_fetch_array($result)) 
 					{
 					?>
-                    <div class="item hospitaly">
+                    <div class="item hospitality">
                         <div class="picframe">
                             <a class="simple-ajax-popup-align-top" href="project_details.php?id=<?php echo $row['id'];?>">
                                 <span class="overlay">

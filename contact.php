@@ -252,7 +252,7 @@
 
                                 <span><strong>Web:</strong><a href="#test">http://arteg.in</a></span>
 
-                                <span><strong>Open</strong>Sunday - Friday 08:00 - 18:00</span>
+                                <span><strong>Open</strong>Monday - Friday  9AM - 6PM</span>
 
                             </address>
 

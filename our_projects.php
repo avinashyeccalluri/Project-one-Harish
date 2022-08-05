@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+include('picConfig.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -108,132 +108,45 @@ include('config.php');
 
                 </div>
 
-                <div id="gallery" class="gallery full-gallery de-gallery pf_full_width pf_4_cols wow fadeInUp" data-wow-delay=".3s">
-
+                <div id="gallery" class="grid gallery full-gallery de-gallery pf_full_width pf_4_cols wow fadeInUp" data-wow-delay=".3s">
+                    <div class="grid-sizer"></div>
                     <!-- gallery item -->
-                     <?php
-                    $result = mysqli_query($conn, "SELECT * from tbl_projects where category_id='1'");
-				    while($row = mysqli_fetch_array($result)) 
-					{
-					?>
-
-                    <!-- gallery item -->
-                    <div class="item commercial">
-                        <div class="picframe">
-                            <a class="simple-ajax-popup-align-top" href="project_details.php?id=<?php echo $row['id'];?>">
-                                <span class="overlay">
-                                    <span class="pf_text">
-                                        <span class="project-name"><?php echo $row['name'];?></span>
-                                    </span>
-                                </span>
-                            </a>
-                            <img src="<?php echo $row['image_1'];?>" alt="" style="max-width:339px; max-height:191px" />
-                        </div>
-                    </div>
-                    <!-- close gallery item -->
                     <?php
-					}?>
-                    
-                     <?php
-                    $result = mysqli_query($conn, "SELECT * from tbl_projects where category_id='2'");
-				    while($row = mysqli_fetch_array($result)) 
-					{
-					?>
-                    <div class="item hospitaly">
-                        <div class="picframe">
-                            <a class="simple-ajax-popup-align-top" href="project_details.php?id=<?php echo $row['id'];?>">
-                                <span class="overlay">
-                                    <span class="pf_text">
-                                        <span class="project-name"><?php echo $row['name'];?></span>
-                                    </span>
-                                </span>
-                            </a>
+                    foreach ($picConfig as $key => $value) {
+                        foreach ($value as $key_1 => $value_1) {
+                            $i = rand(1, 3);
+                            if ($i == 1)
+                                $class = 'large-width';
+                            if ($i == 2)
+                                $class = 'large-height';
+                            else
+                                $class = ''
 
-                            <img src="<?php echo $row['image_1'];?>" alt="" style="max-width:339px; max-height:191px"/>
-                        </div>
-                        
-                    </div>
-                   <?php
-					}?>
-                    
-                    
-                     <?php
-                    $result = mysqli_query($conn, "SELECT * from tbl_projects where category_id='3'");
-				    while($row = mysqli_fetch_array($result)) 
-					{
-					?>
-                    <div class="item institutional">
-                        <div class="picframe">
-                            <a class="simple-ajax-popup-align-top" href="project_details.php?id=<?php echo $row['id'];?>">
-                                <span class="overlay">
-                                    <span class="pf_text">
-                                        <span class="project-name"><?php echo $row['name'];?></span>
-                                    </span>
-                                </span>
-                            </a>
+                    ?>
 
-                            <img src="<?php echo $row['image_1'];?>" alt="" style="max-width:339px; max-height:191px"/>
-                        </div>
-                        
-                    </div>
-                   <?php
-					}?>
-                    
-                    
-                     <?php
-                    $result = mysqli_query($conn, "SELECT * from tbl_projects where category_id='4'");
-				    while($row = mysqli_fetch_array($result)) 
-					{
-					?>
-                    <div class="item interior">
-                        <div class="picframe">
-                            <a class="simple-ajax-popup-align-top" href="project_details.php?id=<?php echo $row['id'];?>">
-                                <span class="overlay">
-                                    <span class="pf_text">
-                                        <span class="project-name"><?php echo $row['name'];?></span>
-                                    </span>
-                                </span>
-                            </a>
+                            <div class="item grid-item <?php echo $class.' '.$key; ?> ">
+                                <div class="picframe">
+                                    <a class="simple-ajax-popup-align-top" href="project_details.php?id=<?php echo $value_1['id']; ?>">
+                                        <span class="overlay">
+                                            <span class="pf_text">
+                                                <span class="project-name"><?php echo $value_1['title']; ?></span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <img src="<?php echo './images/projects/' . $key . '/' . $key_1 . '/' . $key_1 . ' (1).jpg' ?>" alt=" Test images" />
+                                </div>
 
-                            <img src="<?php echo $row['image_1'];?>" alt="" style="max-width:339px; max-height:191px"/>
-                        </div>
-                        
-                    </div>
-                   <?php
-					}?>
-                    
-                    
+                            </div>
+
                     <?php
-                    $result = mysqli_query($conn, "SELECT * from tbl_projects where category_id='5'");
-				    while($row = mysqli_fetch_array($result)) 
-					{
-					?>
-                    <div class="item residential">
-                        <div class="picframe">
-                            <a class="simple-ajax-popup-align-top" href="project_details.php?id=<?php echo $row['id'];?>">
-                                <span class="overlay">
-                                    <span class="pf_text">
-                                        <span class="project-name"><?php echo $row['name'];?></span>
-                                    </span>
-                                </span>
-                            </a>
-                            <img src="<?php echo $row['image_1'];?>" alt="" style="max-width:339px; max-height:191px"/>
-                        </div>
-                     </div>    
-                     <?php
-					 }?>
-					    
-                   
-                    <!-- close gallery item -->
 
-                    <!-- gallery item -->
-                    
-                    
-                    <!-- close gallery item -->
+                        }
+                    } ?>
 
-                   
 
-                  
+
+
+
                 </div>
                
             </section>

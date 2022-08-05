@@ -33,7 +33,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6">
-                                &copy; Copyright 2020 - ARTEG Architects & Associates  by <span class="id-color">TEJUS</span>
+                                &copy; Copyright 2020 - ARTEG Architects & Associates
                             </div>
                             <div class="col-md-6 text-right">
                                 <div class="social-icons">

@@ -1,99 +1,77 @@
 <?php
-include('config.php');
-$result = mysqli_query($conn, "SELECT * from tbl_projects where id='".$_REQUEST['id']."'");
-$row = mysqli_fetch_array($result);
+include('picConfig.php');
+$id = $_REQUEST['id'];
+$selected_project = [];
+foreach ($picConfig as $key => $value) {
+    foreach ($value as $key_1 => $value_1) {
+        if ($value_1['id'] == $id) $selected_project = ['project_location' => $key_1, 'project_details' => $value_1, 'project_category' => $key];
+        break;
+    }
+}
 ?>
 <div class="container project-view">
 
     <div class="row">
         <div class="col-md-8 project-images">
-            <img src="<?php echo $row['image_1'];?>" alt="" class="img-responsive" />
             <?php
-			if($row['image_2']!='')
-			{?>
-            <img src="<?php echo $row['image_2'];?>" alt="" class="img-responsive" />
+            foreach ($selected_project['project_details']['images'] as $key => $value) {
+            ?>
+                <img src="<?php echo './images/projects/' . $selected_project['project_category'] . '/' . $selected_project['project_location'] . '/' . $selected_project['project_location'] . ' (' . $value . ').jpg' ?>" alt="test images" class="img-responsive" />
             <?php
-			}?>
-            <?php
-			if($row['image_3']!='')
-			{?>
-            <img src="<?php echo $row['image_3'];?>" alt="" class="img-responsive" />
-            <?php
-			}?>
-            <?php
-			if($row['image_4']!='')
-			{?>
-            <img src="<?php echo $row['image_4'];?>" alt="" class="img-responsive" />
-            <?php
-			}?>
+            }
+            ?>
         </div>
         <div class="col-md-4">
             <div class="project-info">
-                <h2><?php echo $row['name'];?></h2>
+                <h2><?php echo $selected_project['project_details']['title']; ?></h2>
 
                 <div class="details">
                     <div class="info-text">
                         <span class="title">Date</span>
                         <span class="val">
-                            <?php echo date('d-m-Y',strtotime($row['start_date']));?></span>
+                            <?php echo $selected_project['project_details']['start_date']; ?></span>
                     </div>
 
                     <div class="info-text">
                         <span class="title">Location</span>
-                        <span class="val"><?php echo $row['location'];?></span>
+                        <span class="val"><?php echo $selected_project['project_details']['location']; ?></span>
                     </div>
 
-                    
+
 
                     <div class="info-text">
                         <span class="title">Client</span>
-                        <span class="val"><?php echo $row['client'];?></span>
+                        <span class="val"><?php echo $selected_project['project_details']['client']; ?></span>
                     </div>
 
                     <div class="info-text">
                         <span class="title">Category</span>
-                        <span class="val"><?php
-                            if($row['category_id']==1)
-                            echo 'Commercial';
-                            else if($row['category_id']==2)
-                            echo 'Hospitality';
-                            else if($row['category_id']==3)
-                            echo 'Institutional';
-                            else if($row['category_id']==4)
-                            echo 'Interiors';
-                            else if($row['category_id']==5)
-                            echo 'Residential';
-                            ?></span>
+                        <span class="val"><?php 
+                        echo $projectCategory[$selected_project['project_category']];
+                                            ?></span>
                     </div>
-                    <?php
-        if($row['area']!='')
-        {?>
-                <div class="info-text">
-                        <span class="title">Area</span>
-                        <span class="val">
-                        <?php
-                        echo $row['area'].'sq.ft';
-                        ?>
-                        </span>
-                    </div>    
-        <?php
-        }?>        
+                        <div class="info-text">
+                            <span class="title">Area</span>
+                            <span class="val">
+                                <?php
+                                echo $selected_project['project_details']['area'] . 'sq.ft';
+                                ?>
+                            </span>
+                        </div>
                 </div>
-        <?php
-        if($row['description']!='')
-        {?>
-                <p><?php echo $row['description'];?></p>
-                
-    <?php
-        }?>
-        <?php
-        if($row['our_solution']!='')
-        {?>
+                <?php
+                if ($selected_project['project_details']['description'] != '') { ?>
+                    <p><?php echo $selected_project['project_details']['description']; ?></p>
+
+                <?php
+                } ?>
+                <?php
+                if ($selected_project['project_details']['plan_description'] != '') { ?>
                     <h4>Our Solutions</h4>
-                    <p><?php echo $row['our_solution'];?></p>
-          <?php
-        }?>
-                        
+                    <p><?php echo $selected_project['project_details']['plan_description']; ?></p>
+                <?php
+                } ?>
+
             </div>
         </div>
     </div>
