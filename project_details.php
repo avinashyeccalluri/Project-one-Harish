@@ -4,8 +4,11 @@ $id = $_REQUEST['id'];
 $selected_project = [];
 foreach ($picConfig as $key => $value) {
     foreach ($value as $key_1 => $value_1) {
-        if ($value_1['id'] == $id) $selected_project = ['project_location' => $key_1, 'project_details' => $value_1, 'project_category' => $key];
-        break;
+        if ($value_1['id'] == (int) $id) {
+            $selected_project = ['project_location' => $key_1, 'project_details' => $value_1, 'project_category' => $key];
+            break;
+        }
+        
     }
 }
 ?>
