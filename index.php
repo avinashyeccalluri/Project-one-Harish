@@ -377,7 +377,6 @@ include('picConfig.php');
                                 <li><a href="#" data-filter=".hospitality">Hospitality</a></li>
                                 <li><a href="#" data-filter=".institutional">Institutional</a></li>
                                 <li><a href="#" data-filter=".interior">Interiors</a></li>
-
                                 <li><a href="#" data-filter=".residential">Residential</a></li>
                             </ul>
                         </div>
