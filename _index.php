@@ -51,6 +51,9 @@ include('picConfig.php');
     <!-- custom background -->
     <link rel="stylesheet" href="css/bg.css" type="text/css">
 
+    
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
     <!-- color scheme -->
     <link rel="stylesheet" href="css/color.css" type="text/css" id="colors">
 
@@ -73,7 +76,6 @@ include('picConfig.php');
         }
 
 
-        }
     </style>
 </head>
 
