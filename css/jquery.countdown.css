@@ -46,12 +46,12 @@
 	letter-spacing:1px;
 }
 .countdown-amount {
-	font-family:"Dosis";
+	font-family:'Roboto', sans-serif;
     font-size: 72px;
 	color:#fff;
 }
 .countdown-period {
-	font-family:"Dosis";
+	font-family:'Roboto', sans-serif;
     display: block;
 	width:70px;
 	margin:0 auto;
