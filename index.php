@@ -94,6 +94,97 @@ include('picConfig.php');
         <div id="content" class="no-bottom no-top">
 
             <!-- revolution slider begin -->
+            <section id="section-slider" class="fullwidthbanner-container" aria-label="section-slider">
+                <div id="revolution-slider">
+                    <ul>
+                        <li data-transition="fade" data-slotamount="10" data-masterspeed="200" data-thumb="">
+                            <!--  BACKGROUND IMAGE data-bgfit="100% 100%"-->
+                            <img src="banner/1.jpg" alt="" data-bgfit="100% 100%" />
+                            <div class="tp-caption big-white sft" data-x="0" data-y="160" data-speed="800" data-start="400" data-easing="easeInOutExpo" data-endspeed="450">
+                                Our Expertise For
+                            </div>
+
+                            <div class="tp-caption ultra-big-white customin customout start" data-x="0" data-y="center" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:2;scaleY:2;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.85;scaleY:0.85;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="800" data-start="400" data-easing="easeInOutExpo" data-endspeed="400">
+                                Architecture Design
+                            </div>
+
+                            <div class="tp-caption sfb" data-x="0" data-y="335" data-speed="400" data-start="800" data-easing="easeInOutExpo">
+                                <a href="our_projects.php" class="btn-slider">Our Portfolio
+                                </a>
+                            </div>
+                        </li>
+
+                        <li data-transition="fade" data-slotamount="10" data-masterspeed="200" data-thumb="">
+                            <!--  BACKGROUND IMAGE -->
+                            <img src="banner/2.jpg" alt="" data-bgfit="100% 100%" />
+                            <div class="tp-caption big-white sft" data-x="0" data-y="160" data-speed="800" data-start="400" data-easing="easeInOutExpo" data-endspeed="450">
+                                Interior Remodeling To Makes
+                            </div>
+
+                            <div class="tp-caption ultra-big-white customin customout start" data-x="0" data-y="center" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:2;scaleY:2;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.85;scaleY:0.85;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="800" data-start="400" data-easing="easeInOutExpo" data-endspeed="400">
+                                Your Life Easier
+                            </div>
+
+                            <div class="tp-caption sfb" data-x="0" data-y="335" data-speed="400" data-start="800" data-easing="easeInOutExpo">
+                                <a href="our_projects.php" class="btn-slider">Our Portfolio
+                                </a>
+                            </div>
+                        </li>
+
+                        <li data-transition="fade" data-slotamount="10" data-masterspeed="200" data-thumb="">
+                            <!--  BACKGROUND IMAGE -->
+                            <img src="banner/3.jpg" alt="" data-bgfit="100% 100%" />
+                            <div class="tp-caption big-white sft" data-x="0" data-y="160" data-speed="800" data-start="400" data-easing="easeInOutExpo" data-endspeed="450">
+                                Our Featured Product
+                            </div>
+
+                            <div class="tp-caption ultra-big-white customin customout start" data-x="0" data-y="center" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:2;scaleY:2;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.85;scaleY:0.85;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="800" data-start="400" data-easing="easeInOutExpo" data-endspeed="400">
+                                Commercial Interiors
+                            </div>
+
+                            <div class="tp-caption sfb" data-x="0" data-y="335" data-speed="400" data-start="800" data-easing="easeInOutExpo">
+                                <a href="our_projects.php" class="btn-slider">Our Portfolio
+                                </a>
+                            </div>
+                        </li>
+
+                        <li data-transition="fade" data-slotamount="10" data-masterspeed="200" data-thumb="">
+                            <!--  BACKGROUND IMAGE -->
+                            <img src="banner/4.jpg" alt="" data-bgfit="100% 100%" />
+                            <div class="tp-caption big-white sft" data-x="0" data-y="160" data-speed="800" data-start="400" data-easing="easeInOutExpo" data-endspeed="450">
+                                Creating Places For
+                            </div>
+
+                            <div class="tp-caption ultra-big-white customin customout start" data-x="0" data-y="center" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:2;scaleY:2;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.85;scaleY:0.85;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="800" data-start="400" data-easing="easeInOutExpo" data-endspeed="400">
+                                People
+                            </div>
+
+                            <div class="tp-caption sfb" data-x="0" data-y="335" data-speed="400" data-start="800" data-easing="easeInOutExpo">
+                                <a href="our_projects.php" class="btn-slider">Our Portfolio
+                                </a>
+                            </div>
+                        </li>
+
+                        <li data-transition="fade" data-slotamount="10" data-masterspeed="200" data-thumb="">
+                            <!--  BACKGROUND IMAGE -->
+                            <img src="banner/5.jpg" alt="" data-bgfit="100% 100%" />
+                            <div class="tp-caption big-white sft" data-x="0" data-y="160" data-speed="800" data-start="400" data-easing="easeInOutExpo" data-endspeed="450">
+                                Architects With A
+                            </div>
+
+                            <div class="tp-caption ultra-big-white customin customout start" data-x="0" data-y="center" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:2;scaleY:2;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.85;scaleY:0.85;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="800" data-start="400" data-easing="easeInOutExpo" data-endspeed="400">
+                                Different Approach
+                            </div>
+
+                            <div class="tp-caption sfb" data-x="0" data-y="335" data-speed="400" data-start="800" data-easing="easeInOutExpo">
+                                <a href="our_projects.php" class="btn-slider">Our Portfolio
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
             <!-- revolution slider close -->
 
             <!-- section begin -->
